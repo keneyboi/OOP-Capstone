@@ -1,14 +1,14 @@
 
-Discrete Calculator:
+# Discrete Calculator
 
-A Java project that allows users to calculate common Discrete Structures 2 formulas
-quickly: Combination, Permutation, Bernoulli, Binomial Distribution, Hypergeometric Distribution.
+ A Java project that allows users to calculate common **Discrete Structures 2** formulas
+quickly: **Combination**, **Permutation**, **Bernoulli**, **Binomial Distribution**, **Hypergeometric Distribution**.
 It makes use of JSwing to give users a quick and easy-to-use user interface. It includes 
 features of such as Calculation, Derivation, and shows History. It also includes filtering of past
 equations and arrangement via when created.
  
 
-Class Name: Equation -> Abstract -> Implements Comparable<Equation>
+### Class Name: Equation -> Abstract -> Implements Comparable<Equation>
 Fields: Result (double)
 	Type (String)
 	creationTime (Instant)
@@ -24,9 +24,10 @@ A	double computeResult();
 A 	double derive(String var);
 A	JPanel getPanel(); 
 
+
 ----------------------------------------------------------------------------
 
-Class Name: Combination -> extends Equation
+### Class Name: Combination -> extends Equation
 
 Fields: n (double);
 	r (double);
@@ -38,9 +39,10 @@ Pu	double computeResult();
 Pu	double derive(String var);
 Pu	JPanel getPanel(); 
 
+
 ----------------------------------------------------------------------------
 
-Class Name: Permutation -> extends Equation
+### Class Name: Permutation -> extends Equation
 
 Fields: n (double);
 	r (double);
@@ -52,9 +54,10 @@ Pu	double computeResult();
 Pu	double derive(String var);
 Pu	JPanel getPanel(); 
 
+
 ----------------------------------------------------------------------------
 
-Class Name: Bernoulli -> extends Equation
+### Class Name: Bernoulli -> extends Equation
 
 Fields: n (double);
 	k (double);
@@ -69,9 +72,10 @@ Pu	double computeResult();
 Pu	double derive(String var);
 Pu	JPanel getPanel(); 
 
+
 ----------------------------------------------------------------------------
 
-Class Name: Binomial -> extends Bernoulli
+### Class Name: Binomial -> extends Bernoulli
 
 Constructor public Binomial(double n, double k, double q, double p) -> calls parent constructor;
 
@@ -80,9 +84,10 @@ Pu	double computeResult();
 Pu	double derive(String var);
 Pu	JPanel getPanel(); 
 
+
 ----------------------------------------------------------------------------
 
-Class Name: Hypergeometric -> extends Equation
+### Class Name: Hypergeometric -> extends Equation
 
 Private
 Fields: n (double); 
@@ -97,9 +102,10 @@ Pu	double computeResult();
 Pu	double derive(String var);
 Pu	JPanel getPanel(); 
 
+
 ----------------------------------------------------------------------------
 
-Class Name: DiscreteCalculatorGUI -> extends JFrame
+### Class Name: DiscreteCalculatorGUI -> extends JFrame
 
 Private
 Fields: currentFile (String)
@@ -114,9 +120,10 @@ Pr	void paint(BackgroundPanel bp);
 Pr	ArrayList<Equation> loadFromFile(String filename); 
 Pr	String saveToFile(String filename); 
 
+
 ----------------------------------------------------------------------------
 
-Class Name: BackgroundPanel -> extends JComponent 
+### Class Name: BackgroundPanel -> extends JComponent 
 
 Private
 Fields: backgroundImage (BufferedImage);
@@ -126,18 +133,21 @@ Constructor public BackgroundPanel(String ImagePath);
 Methods: 
 Prot.	void paintComponent();
 
+
 ----------------------------------------------------------------------------
 
-Class Name: InvalidCalculationException -> extends Exception 
+### Class Name: InvalidCalculationException -> extends Exception 
 	
 Constructor public InvalidCalculationException(String message) -> calls parent constructor
 
+
 ----------------------------------------------------------------------------
 
-Class Name: ArrangeName -> implements Comparator<Equation>
+### Class Name: ArrangeName -> implements Comparator<Equation>
 	
 Method:
 pu	int compare(Equation e1, Equation e2);
+
 
 ----------------------------------------------------------------------------
 
