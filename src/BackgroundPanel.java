@@ -25,7 +25,7 @@ public class BackgroundPanel extends JPanel {
         super.paintComponent(g); // Call super to ensure proper painting of other components
         if (backgroundImage != null) {
             // Draw the image to fill the panel
-            g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+            g.drawImage(backgroundImage, 0, 0, 500, 1000, this);
         }
     }
 }
