@@ -11,7 +11,6 @@
         - Asterialumi (John Vincent Balazon)
  */
 
-
 import java.util.*;
 import java.math.BigInteger;
 
